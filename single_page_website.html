@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BJN Med — Медицинский туризм</title>
+  <meta name="description" content="BJN Med — организация лечения, диагностики и реабилитации за рубежом. Полное сопровождение пациентов." />
+  <style>
+    :root{
+      --bg:#f7fdf8;
+      --card:#ffffff;
+      --accent:#16a34a;
+      --muted:#6b7280;
+      --radius:14px;
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0;background:linear-gradient(180deg,var(--bg),#ffffff);color:#0f172a;overflow-x:hidden}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0;animation:fadeDown 1s ease forwards;opacity:0}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo .mark{width:44px;height:44px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:600;transition:color .2s}
+    nav a:hover{color:var(--accent)}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:44px 0;animation:fadeUp 1.2s ease forwards;opacity:0}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:0 6px 22px rgba(16,24,40,0.06);padding:24px;opacity:0;transform:translateY(30px);transition:all .8s ease}
+    h1{font-size:32px;margin:0 0 12px}
+    p.lead{color:var(--muted);margin:0 0 16px}
+    .cta{display:inline-block;padding:12px 18px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;transition:transform .2s}
+    .cta:hover{transform:scale(1.05)}
+    .features{display:flex;gap:12px;margin-top:18px}
+    .feature{flex:1;padding:14px;border-radius:12px;background:linear-gradient(180deg,#f4fdf7,#e8f9ef);text-align:center}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .about, .services, .contact{padding:44px 0}
+    .services .item{display:flex;gap:12px;align-items:flex-start}
+    .services .item .ico{width:56px;height:56px;border-radius:12px;background:#e6f6ea;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    form{display:grid;gap:10px}
+    input[type=text], input[type=email], textarea{padding:12px;border-radius:10px;border:1px solid #e6edf0}
+    textarea{min-height:120px;resize:vertical}
+    .btn{padding:12px 16px;border-radius:10px;border:0;background:var(--accent);color:white;font-weight:700}
+    footer{padding:28px 0;color:var(--muted);font-size:14px;text-align:center;animation:fadeUp 1.5s ease forwards;opacity:0}
+    .hero-img img{width:100%;border-radius:var(--radius);box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeDown{from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}
+
+    .show{opacity:1!important;transform:translateY(0)!important}
+
+    @media (max-width:920px){.hero{grid-template-columns:1fr;}.grid{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:560px){.grid{grid-template-columns:1fr}.logo .text{display:none};nav a{display:none}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">B</div>
+        <div>
+          <div style="font-weight:800">BJN Med</div>
+          <div style="font-size:12px;color:var(--muted)">Медицинский туризм и лечение за рубежом</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="card">
+          <h1>Организация лечения и диагностики за рубежом</h1>
+          <p class="lead">Полное сопровождение пациентов: подбор клиник, организация поездки, визовая поддержка и медицинский перевод.</p>
+          <a class="cta" href="#contact">Связаться с нами</a>
+
+          <div class="features" aria-hidden>
+            <div class="feature">
+              <div style="font-weight:700">24/7</div>
+              <div style="color:var(--muted);font-size:13px">Сопровождение пациентов</div>
+            </div>
+            <div class="feature">
+              <div style="font-weight:700">Документы</div>
+              <div style="color:var(--muted);font-size:13px">Визы и мед. бумаги</div>
+            </div>
+            <div class="feature">
+              <div style="font-weight:700">Клиники</div>
+              <div style="color:var(--muted);font-size:13px">Проверенные партнёры по всему миру</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-img">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/doctor-1866736_1280.jpg" alt="Врач консультирует пациента" />
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="card">
+        <h2>О компании</h2>
+        <p class="lead">BJN Med — международное агентство медицинского туризма, помогающее пациентам из Казахстана получить качественное лечение, диагностику и реабилитацию за рубежом.</p>
+        <div class="grid" style="margin-top:18px">
+          <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2017/08/06/05/48/doctor-2591106_640.jpg" alt="Медицинская консультация" style="width:100%;border-radius:var(--radius);margin-bottom:8px">
+            <strong>Индивидуальные решения</strong>
+            <p style="color:var(--muted);font-size:13px">Каждая программа подбирается персонально под состояние и пожелания пациента.</p>
+          </div>
+          <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2015/09/02/12/35/hospital-918414_640.jpg" alt="Клиника" style="width:100%;border-radius:var(--radius);margin-bottom:8px">
+            <strong>Проверенные клиники</strong>
+            <p style="color:var(--muted);font-size:13px">Сотрудничаем только с сертифицированными медицинскими учреждениями Европы и Азии.</p>
+          </div>
+          <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2017/08/01/00/32/nurse-2566134_640.jpg" alt="Помощь пациенту" style="width:100%;border-radius:var(--radius);margin-bottom:8px">
+            <strong>Полное сопровождение</strong>
+            <p style="color:var(--muted);font-size:13px">Помощь на каждом этапе — от консультации до возвращения домой.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="card">
+        <h2>Услуги</h2>
+        <div style="margin-top:16px">
+          <div class="item">
+            <div class="ico">1</div>
+            <div>
+              <strong>Организация лечения</strong>
+              <div style="color:var(--muted);font-size:13px">Подбор клиники, врачей и программы лечения в соответствии с диагнозом.</div>
+            </div>
+          </div>
+          <div class="item" style="margin-top:12px">
+            <div class="ico">2</div>
+            <div>
+              <strong>Диагностика и check-up</strong>
+              <div style="color:var(--muted);font-size:13px">Пакеты обследований в ведущих зарубежных центрах.</div>
+            </div>
+          </div>
+          <div class="item" style="margin-top:12px">
+            <div class="ico">3</div>
+            <div>
+              <strong>Визовая и организационная поддержка</strong>
+              <div style="color:var(--muted);font-size:13px">Подготовка медицинских документов, перевод, бронирование и логистика.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="card">
+        <h2>Контакты</h2>
+        <p style="color:var(--muted)">Адрес: Казахстан, Астана, ул. Кенесары 8, офис 919, 9 этаж, БЦ Mon Blan</p>
+        <p style="color:var(--muted)">Телефон: +7 707 856 89 95 (Айгуль)</p>
+        <p style="color:var(--muted)">Email: bjnmed@mail.ru</p>
+        <div style="margin-top:16px;display:grid;grid-template-columns:1fr 320px;gap:18px">
+          <div>
+            <p style="margin:0 0 8px">Свяжитесь с нами, и мы подберём для вас оптимальное решение по лечению и диагностике за границей.</p>
+          </div>
+          <div>
+            <div class="card" style="padding:12px;text-align:center">
+              <div style="font-weight:700">Часы работы</div>
+              <div style="color:var(--muted);margin-top:6px">Пн–Пт 09:00–18:00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <strong>BJN Med</strong> — Все права защищены</div>
+      <div style="color:var(--muted);font-size:13px;margin-top:8px">С заботой о вашем здоровье</div>
+    </footer>
+  </div>
+
+  <script>
+    // Анимация появления элементов при скролле
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.2});
+
+    document.querySelectorAll('.card').forEach(el => observer.observe(el));
+
+    window.addEventListener('load', () => {
+      document.querySelector('header').style.opacity = '1';
+      document.querySelector('footer').style.opacity = '1';
+      document.querySelector('.hero').style.opacity = '1';
+    });
+  </script>
+</body>
+</html>
